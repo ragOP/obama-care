@@ -56,7 +56,7 @@ const Hero = () => {
               </p>
               <h2>Call Now For Your 100% Free Quote</h2>
               <a href="tel:(888) 907-0053">
-                <i class="icon icon-phone">�&nbsp;�</i> (888) 907-0053
+                <i class="icon icon-phone">&nbsp;</i> (888) 907-0053
               </a>
               <div class="rating">
                 <img src={trustL} alt="" srcset="" />
@@ -86,7 +86,7 @@ const Hero = () => {
                   <li>
                     <div class="feature">
                       <div class="feature-icon">
-                        <i class="icon icon-ok-circled">�&nbsp;�</i>
+                        <i class="icon icon-ok-circled">&nbsp;</i>
                       </div>
                       <div class="feature-tag">
                         <strong>$0</strong> Unlimited
@@ -98,7 +98,7 @@ const Hero = () => {
                   <li>
                     <div class="feature">
                       <div class="feature-icon">
-                        <i class="icon icon-ok-circled">�&nbsp;�</i>
+                        <i class="icon icon-ok-circled">&nbsp;</i>
                       </div>
                       <div class="feature-tag">
                         <strong>$0</strong> Unlimited virtual
@@ -112,7 +112,7 @@ const Hero = () => {
                   <li>
                     <div class="feature">
                       <div class="feature-icon">
-                        <i class="icon icon-ok-circled">�&nbsp;�</i>
+                        <i class="icon icon-ok-circled">&nbsp;</i>
                       </div>
                       <div class="feature-tag">
                         <strong>$3</strong> Prescriptions
@@ -124,7 +124,7 @@ const Hero = () => {
                   <li>
                     <div class="feature">
                       <div class="feature-icon">
-                        <i class="icon icon-ok-circled">�&nbsp;�</i>
+                        <i class="icon icon-ok-circled">&nbsp;</i>
                       </div>
                       <div class="feature-tag">
                         <strong>$100</strong> Earn rewards
@@ -216,15 +216,15 @@ const Hero = () => {
                       <strong>$0 </strong>Deductible
                     </li>
                     <li>
-                      <i class="icon icon-ok-circled">�&nbsp;�</i>
+                      <i class="icon icon-ok-circled">&nbsp;</i>
                       <strong>$0 </strong>Copays
                     </li>
                     <li>
-                      <i class="icon icon-ok-circled">�&nbsp;�</i>
+                      <i class="icon icon-ok-circled">&nbsp;</i>
                       <strong>$0 </strong>Preventive Care Visits
                     </li>
                     <li>
-                      <i class="icon icon-ok-circled">�&nbsp;�</i>
+                      <i class="icon icon-ok-circled">&nbsp;</i>
                       <strong>$0 </strong>Doctor Visits
                     </li>
                   </ul>
