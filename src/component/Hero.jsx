@@ -5,8 +5,43 @@ import google from "../assests/google.png";
 import yelp from "../assests/yelp.png";
 import trust from "../assests/trustpilot-logo.png";
 import trustL from "../assests/trustpilot.png";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const Hero = () => {
+  const testimonials = [
+    {
+      content:
+        "Jeff Morningstar, did a very good job explaining all of my different options. Compared different plans, taking into account the different doctor's I visit and all the different options I use to let me decide what plan that I wanted.",
+      name: "Christie Morgan",
+      stars: 5,
+    },
+    {
+      content:
+        "Zeff Morningstar, did a very good job explaining all of my different options. Compared different plans, taking into account the different doctor's I visit and all the different options I use to let me decide what plan that I wanted.",
+      name: "Christie Morgan",
+      stars: 5,
+    },
+    {
+      content:
+        "Geff Morningstar, did a very good job explaining all of my different options. Compared different plans, taking into account the different doctor's I visit and all the different options I use to let me decide what plan that I wanted.",
+      name: "Christie Morgan",
+      stars: 5,
+    },
+  ];
+
+  console.log(testimonials.length);
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 1000,
+  };
   return (
     <>
       <div class="hero">
@@ -201,67 +236,21 @@ const Hero = () => {
                     <img src={yelp} alt="" />
                     <img src={trust} alt="" />
                   </div>
-                  <div class="testimonial-holder">
-                    <div class="owl-carousel">
-                      <div class="testimonial">
-                        <p>
-                          Jeff Morningstar, did a very good job explaining all
-                          of my different options. Compared different plans,
-                          taking into account the different doctor's I visit and
-                          all the different options I use to let me decide what
-                          plan that I wanted.
-                        </p>
-                        <div class="testimonial-bottom">
-                          <div class="name-holder">Christie Morgan</div>
-                          <div class="stars">
-                            <i class="icon icon-star">&nbsp;</i>
-                            <i class="icon icon-star">&nbsp;</i>
-                            <i class="icon icon-star">&nbsp;</i>
-                            <i class="icon icon-star">&nbsp;</i>
-                            <i class="icon icon-star">&nbsp;</i>
+                  <Slider {...settings} className="testimonial-holder">
+                    {testimonials.map((testimonial, index) => (
+                      <div key={index} className="testimonial">
+                        <p>{testimonial.content}</p>
+                        <div className="testimonial-bottom">
+                          <div className="name-holder">{testimonial.name}</div>
+                          <div className="stars">
+                            {[...Array(testimonial.stars)].map((_, i) => (
+                              <i key={i} className="icon icon-star" />
+                            ))}
                           </div>
                         </div>
                       </div>
-                      <div class="testimonial">
-                        <p>
-                          Jeff Morningstar, did a very good job explaining all
-                          of my different options. Compared different plans,
-                          taking into account the different doctor's I visit and
-                          all the different options I use to let me decide what
-                          plan that I wanted.
-                        </p>
-                        <div class="testimonial-bottom">
-                          <div class="name-holder">Christie Morgan</div>
-                          <div class="stars">
-                            <i class="icon icon-star">�&nbsp;�</i>
-                            <i class="icon icon-star">�&nbsp;�</i>
-                            <i class="icon icon-star">�&nbsp;�</i>
-                            <i class="icon icon-star">�&nbsp;�</i>
-                            <i class="icon icon-star">�&nbsp;�</i>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="testimonial">
-                        <p>
-                          Jeff Morningstar, did a very good job explaining all
-                          of my different options. Compared different plans,
-                          taking into account the different doctor's I visit and
-                          all the different options I use to let me decide what
-                          plan that I wanted.
-                        </p>
-                        <div class="testimonial-bottom">
-                          <div class="name-holder">Christie Morgan</div>
-                          <div class="stars">
-                            <i class="icon icon-star">�&nbsp;�</i>
-                            <i class="icon icon-star">�&nbsp;�</i>
-                            <i class="icon icon-star">�&nbsp;�</i>
-                            <i class="icon icon-star">�&nbsp;�</i>
-                            <i class="icon icon-star">�&nbsp;�</i>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                    ))}
+                  </Slider>
                 </div>
               </div>
             </div>
