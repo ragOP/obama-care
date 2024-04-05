@@ -847,7 +847,6 @@ body {
   to {
     -webkit-transform: scale(1.05);
             transform: scale(1.05); } }
-/* Custom styles for Owl Carousel */
 
 .owl-carousel {
   position: relative;
@@ -948,7 +947,6 @@ body {
   margin: 30px;
 }
 
-/* BlogPage.css */
 .blog-container {
   max-width: 800px;
   margin: 0 auto;
