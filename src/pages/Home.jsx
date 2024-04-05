@@ -6,6 +6,7 @@ import Footer from "../component/Footer";
 import PostFooter from "../component/PostFooter";
 import ImageCarousel from "../component/ImageCarousel";
 import Boxes from "../component/Boxes";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const boxesData = [
@@ -40,11 +41,9 @@ const Home = () => {
       <ImageCarousel />
       <div className="bx">
         {boxesData.map((box, index) => (
-          <Boxes
-            key={index}
-            imageUrl={box.imageUrl}
-            description={box.description}
-          />
+          <Link key={index} to="/blog" className="link">
+            <Boxes imageUrl={box.imageUrl} description={box.description} />
+          </Link>
         ))}
       </div>
       <Hero />
