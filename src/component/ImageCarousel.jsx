@@ -17,7 +17,7 @@ const ImageCarousel = () => {
     infinite: true,
     speed: 1000, // 1 second
     autoplay: true,
-    autoplaySpeed: 1000, // 1 second
+    autoplaySpeed: 8000, // 1 second
     slidesToShow: 1,
     slidesToScroll: 1,
     centerMode: true, // Enable center mode

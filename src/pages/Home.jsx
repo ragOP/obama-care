@@ -14,25 +14,22 @@ const Home = () => {
       imageUrl:
         "https://obama-care.vercel.app/static/media/462028.0b31db4a1e58fcd727c9.jpg",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in varius lectus. Nullam quis tortor quis nisi fermentum posuere. Donec id est sed justo efficitur scelerisque. Cras auctor aliquet justo, et faucibus velit volutpat sit amet.",
+        "What are the main differences between Medicare and Medicaid? (Detailed)",
     },
     {
       imageUrl:
         "https://obama-care.vercel.app/static/media/462028.0b31db4a1e58fcd727c9.jpg",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in varius lectus. Nullam quis tortor quis nisi fermentum posuere. Donec id est sed justo efficitur scelerisque. Cras auctor aliquet justo, et faucibus velit volutpat sit amet.",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     },
     {
       imageUrl:
         "https://obama-care.vercel.app/static/media/462028.0b31db4a1e58fcd727c9.jpg",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in varius lectus. Nullam quis tortor quis nisi fermentum posuere. Donec id est sed justo efficitur scelerisque. Cras auctor aliquet justo, et faucibus velit volutpat sit amet.",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     },
     {
       imageUrl:
         "https://obama-care.vercel.app/static/media/462028.0b31db4a1e58fcd727c9.jpg",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in varius lectus. Nullam quis tortor quis nisi fermentum posuere. Donec id est sed justo efficitur scelerisque. Cras auctor aliquet justo, et faucibus velit volutpat sit amet.",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     },
   ];
   return (
