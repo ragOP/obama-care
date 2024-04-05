@@ -12,7 +12,7 @@ const Header = () => {
             <div class="location"></div>
           </div>
           <div class="call-now">
-            <span>Need Help?</span>
+            {/* <span>Need Help?</span> */}
             <a href="tel:(888) 907-0053">
               <i class="icon icon-phone">&nbsp;</i> (888) 907-0053
             </a>
