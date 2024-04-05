@@ -41,7 +41,7 @@ body {
   position: relative;
   display: block;
   background-color: #f2faff; 
-width: 114vw !important;}
+width: 96.5vw !important;}
   .wrapper .container {
     max-width: 24rem;
     padding: 0 1.5rem;
@@ -892,3 +892,65 @@ width: 114vw !important;}
 .owl-carousel .stars {
   color: gold;
 }
+
+.carousel-image {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+  height: 600px;
+  border-radius: 20px;
+}
+#crs {
+  padding: "100px 50px 0px 50px"; 
+}
+
+@media only screen and (max-width: 768px) {
+  .carousel-container {
+    padding: 50px;
+  }
+
+  .carousel-image {
+    height: 400px; 
+  }
+}
+
+.box-container {
+  display: flex;
+  margin-bottom: 20px;
+  align-items: center;
+  width: 500px;
+}
+
+.image-container {
+  flex: 0 0 auto;
+  margin-right: 20px;
+}
+
+.box-image {
+  width: 100px;
+  height: 140px;
+  object-fit: cover; 
+}
+
+.description-container {
+  flex: 1;
+}
+
+.description {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.bx{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 50px 0 0 0;
+}
+.box-container{
+  padding: 0 30px;
+}
+
+
+
