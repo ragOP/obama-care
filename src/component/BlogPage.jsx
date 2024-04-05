@@ -48,6 +48,7 @@ const BlogPage = () => {
         Medicare beneficiaries may pay premiums, deductibles, coinsurance, and
         copayments for various services, depending on the parts of Medicare they
         enroll in and their income level.
+        <br />
         <b>Medicaid:</b>
         <br />
         <b>Coverage Population:</b> Medicaid is a joint federal and state
