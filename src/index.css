@@ -918,7 +918,6 @@ body {
   display: flex;
   margin-bottom: 20px;
   align-items: center;
-  padding: 200px;
 }
 
 .image-container {
@@ -927,8 +926,8 @@ body {
 }
 
 .box-image {
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 80px;
   object-fit: cover; 
 }
 
@@ -947,9 +946,6 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   margin: 30px;
-}
-.box-container{
-  padding: 0 30px;
 }
 
 /* BlogPage.css */
