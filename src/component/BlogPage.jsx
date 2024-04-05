@@ -5,8 +5,7 @@ const BlogPage = () => {
   return (
     <div className="blog-container">
       <h1 className="blog-title">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in
-        varius lectus.
+        What are the main differences between Medicare and Medicaid?
       </h1>
       <img
         className="blog-image"

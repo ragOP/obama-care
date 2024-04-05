@@ -13,7 +13,7 @@ const ImageCarousel = () => {
   ];
 
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 1000, // 1 second
     autoplay: true,
