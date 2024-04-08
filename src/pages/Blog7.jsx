@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Header from "../component/Header";
 import Footer from "../component/Footer";
 import PostFooter from "../component/PostFooter";
-import BlogPage from "../component/BlogPages/BlogPage";
+import BlogPage7 from "../component/BlogPages/BlogPage7";
 import loader from "../assests/loader.gif";
 
 const Blog = () => {
@@ -23,7 +23,7 @@ const Blog = () => {
     <div className="wrapper">
       <Header />
       {loading ? (
-        <BlogPage />
+        <BlogPage7 />
       ) : (
         <div
           style={{
