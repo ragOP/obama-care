@@ -2,15 +2,15 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import logo2 from "../assests/logo2.jpeg";
+import logo3 from "../assests/logo3.jpeg";
+import logo4 from "../assests/logo4.jpeg";
+import logo5 from "../assests/logo5.jpeg";
+import logo6 from "../assests/logo6.jpeg";
+import logo7 from "../assests/log7.jpeg";
 
 const ImageCarousel = () => {
-  const images = [
-    "https://obama-care.vercel.app/static/media/462028.0b31db4a1e58fcd727c9.jpg",
-    "https://obama-care.vercel.app/static/media/462028.0b31db4a1e58fcd727c9.jpg",
-    "https://obama-care.vercel.app/static/media/462028.0b31db4a1e58fcd727c9.jpg",
-    "https://obama-care.vercel.app/static/media/462028.0b31db4a1e58fcd727c9.jpg",
-    "https://obama-care.vercel.app/static/media/462028.0b31db4a1e58fcd727c9.jpg",
-  ];
+  const images = [logo2, logo3, logo4, logo5, logo6, logo7];
 
   const settings = {
     dots: false,
