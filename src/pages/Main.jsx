@@ -4,10 +4,10 @@ import React, { useState, useEffect } from "react";
 
 import "./styles.css";
 
-import { scrollTo } from  './utils'
+import { scrollTo } from "./utils";
 import { ToastContainer, toast, cssTransition } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import Head_bg from '../assests/aaa.png'
+import Head_bg from "../assests/aaa.png";
 // import Headline from "../assets/headline_spandeb1.png";
 
 // google tag manager
@@ -19,20 +19,19 @@ import Head_bg from '../assests/aaa.png'
 // TagManager.initialize(tagManagerArgs);
 
 export default function Main() {
+  // const SlideUp = cssTransition({
+  //   enter: "toast-enter",
+  //   exit: "toast-exit",
+  // });
 
-  const SlideUp = cssTransition({
-    enter: "toast-enter",
-    exit: "toast-exit",
-  });
-  
   const messages = [
     "Emily A. Rodriguez from Miami, FL just qualified for a $3,600 Grocery Allowance.",
     "Michael D. Johnson from Dallas, TX just qualified for a $3,600 Grocery Allowance.",
     "Sophia L. Thompson from Los Angeles, CA just qualified for a $3,600 Grocery Allowance.",
     "Ethan M. Baker from Chicago, IL just qualified for a $3,600 Grocery Allowance.",
-    "Ava K. Campbell from Seattle, WA just qualified for a $3,600 Grocery Allowance."
+    "Ava K. Campbell from Seattle, WA just qualified for a $3,600 Grocery Allowance.",
   ];
-  
+
   // Function to shuffle array in place
   const shuffleArray = (array) => {
     for (let i = array.length - 1; i > 0; i--) {
@@ -40,20 +39,20 @@ export default function Main() {
       [array[i], array[j]] = [array[j], array[i]];
     }
   };
-  
+
   shuffleArray(messages);
-  
+
   const notify = (message) => {
     // Dismiss all existing toasts
     toast.dismiss();
     let boldedMessage = message;
-  
+
     // Make the word "Allowance" bold in all lines
     boldedMessage = boldedMessage.replace(
       /\$3,600 Grocery Allowance/g,
       '<strong class="green-bold">A Free Health Insurance</strong>'
     );
-  
+
     // Make specific dollar amounts bold only in specific lines
     const specialAmounts = ["$16,800", "$16,800", "$16,800", "$16,800"];
     specialAmounts.forEach((amount) => {
@@ -64,7 +63,7 @@ export default function Main() {
         );
       }
     });
-  
+
     // Show new toast
     toast(<div dangerouslySetInnerHTML={{ __html: boldedMessage }} />, {
       position: "bottom-right",
@@ -76,7 +75,7 @@ export default function Main() {
       closeButton: false,
     });
   };
-  
+
   useEffect(() => {
     const delayedEffect = setTimeout(() => {
       // Create a function to handle the logic
@@ -87,43 +86,37 @@ export default function Main() {
         notify(randomMessage);
         return randomTime;
       };
-  
+
       // Show the first toast
       let nextTime = showRandomToast();
-  
+
       // Set up a recurring timer
       const timer = setInterval(() => {
         nextTime = showRandomToast();
       }, nextTime);
-  
+
       // Cleanup
       return () => {
         clearInterval(timer);
       };
     }, 6000); // 6-second delay before the useEffect code runs
-  
+
     // Cleanup for the setTimeout
     return () => {
       clearTimeout(delayedEffect);
     };
   }, []);
-  
-  
+
   useEffect(() => {
     window.document.title = "Senior's Allowance Program 2024";
-
-    
   }, []);
-
-
 
   const [quiz, setQuiz] = useState("1. Are you over the age of 18?  ");
   const [step, setStep] = useState("process");
   const [min, setMin] = useState(3);
   const [second, setSecond] = useState(0);
-  const [yes,setYes]=useState("YES")
-  const [no,setNo]=useState("NO")
-  
+  const [yes, setYes] = useState("YES");
+  const [no, setNo] = useState("NO");
 
   const stepProcess = () => {
     if (step === "Reviewing Your Answers...") {
@@ -139,9 +132,6 @@ export default function Main() {
     if (step === "Confirming Eligibility...") {
       setTimeout(() => {
         setStep("completed");
-
-        
-         
       }, 1500);
     }
 
@@ -162,44 +152,51 @@ export default function Main() {
   }, [step]);
 
   const topScroll = (id) => {
-    // scrollTo({ id });  
+    // scrollTo({ id });
   };
 
   const handleQuizP = () => {
     topScroll("btn");
     if (quiz === "1. Are you over the age of 18?  ") {
-      setYes("Yes")
-      setNo("No")
+      setYes("Yes");
+      setNo("No");
       setQuiz("2. Are you a legal resident of United States?");
+    } else if (quiz === "2. Are you a legal resident of United States?") {
+      setYes("Yes");
+      setNo("No");
+      setQuiz("3. Are you already paying for Health Insurance?");
     } else {
       setStep("Reviewing Your Answers...");
-     
+
       topScroll("top");
     }
-
- 
   };
 
   const handleQuizN = () => {
     topScroll("btn");
     if (quiz === "Are you over the age of 60?  ") {
-      setYes("Yes")
-      setNo("No")
+      setYes("Yes");
+      setNo("No");
       setQuiz("2. Are you a legal resident of United States?");
+    } else if (quiz === "2. Are you a legal resident of United States?") {
+      setYes("Yes");
+      setNo("No");
+      setQuiz("3. Are you already paying for Health Insurance?");
     } else {
       setStep("Reviewing Your Answers...");
-    
+
       topScroll("top");
     }
-
- 
   };
 
   return (
     <div>
-     <ToastContainer />
-      <div style={{marginBottom:'4px'}} className="top-sticky-blue-test2" id="top">
-      Senior's Allowance Program 2024
+      <div
+        style={{ marginBottom: "4px" }}
+        className="top-sticky-blue-test2"
+        id="top"
+      >
+        Senior's Allowance Program 2024
       </div>
       {step === "process" ? (
         <>
@@ -207,32 +204,33 @@ export default function Main() {
             <div className="main-descrition-5-5">
               <div className="main-des-title-6-7">
                 <b>
-                Americans Over 18 Now Qualify For A FREE Health Insurance for life. Here's How!
+                  Americans Over 18 Now Qualify For A FREE Health Insurance for
+                  life. Here's How!
                 </b>
-              
-
               </div>
               {/* <img className='topic-img-larger' src = {Headline} alt = "head"/> */}
               <img className="topic-img-middle-z" src={Head_bg} alt="head" />
-              <div  style={{marginTop:'14px'}}className="main-des-5">
-              Americans under 18 can claim a Free Health Insurance plan for life, which covers all of your medical expenses.
-
+              <div style={{ marginTop: "14px" }} className="main-des-5">
+                Americans under 18 can claim a Free Health Insurance plan for
+                life, which covers all of your medical expenses.
               </div>
-              <div className="main-des-5"  style={{marginTop:'-5px'}}>
-              It can be used for expenses like medicines, doctor visits, pre-existing conditions and prescriptions, emergency vists, and much more,
+              <div className="main-des-5" style={{ marginTop: "-5px" }}>
+                It can be used for expenses like medicines, doctor visits,
+                pre-existing conditions and prescriptions, emergency vists, and
+                much more,
               </div>
               {/* <div className='main-des-5' style = {{marginTop:"1rem"}}><b>Simplemente responda las siguientes preguntas:</b></div> */}
             </div>
-            <div style={{marginTop:'-5px'}} className="survey">
+            <div style={{ marginTop: "-5px" }} className="survey">
               <div className="quiz-5" id="btn">
                 {quiz}
               </div>
-              <div  className="answer">
+              <div className="answer">
                 <div className="answer-btn-5" onClick={handleQuizP}>
-              {yes}
+                  {yes}
                 </div>
                 <div className="answer-btn-5" onClick={handleQuizN}>
-              {no}
+                  {no}
                 </div>
               </div>
             </div>
@@ -251,9 +249,7 @@ export default function Main() {
           <div className="spots-count">Spots remaining: 4</div>
           <div className="tap-direction">👇 TAP BELOW TO CALL 👇</div>
           <a href="tel:+18885170494">
-            <div className="call-btn" >
-            CALL (888) 517-0494
-            </div>
+            <div className="call-btn">CALL (888) 517-0494</div>
           </a>
           <div className="sub-title">We Have Reserved Your Spot</div>
           <div className="sub-description">
@@ -272,7 +268,6 @@ export default function Main() {
         <div className="copyright">
           Copyright © 2024 - All right reserved Daily America Savings.
         </div>
-      
       </div>
       <ToastContainer
         position="bottom-right"
