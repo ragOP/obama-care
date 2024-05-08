@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 //@ts-ignore
 // import TagManager from "react-gtm-module";
-import axios from "axios";
+
 import "./styles.css";
 
 import { scrollTo } from  './utils'
