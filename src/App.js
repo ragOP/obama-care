@@ -7,6 +7,7 @@ import Blog4 from "./pages/Blog4";
 import Blog5 from "./pages/Blog5";
 import Blog6 from "./pages/Blog6";
 import Blog7 from "./pages/Blog7";
+import Main from "./pages/Main";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/blog5" Component={Blog5} />
         <Route path="/blog6" Component={Blog6} />
         <Route path="/blog7" Component={Blog7} />
+        <Route path="/aca1" Component={Main} />
       </Routes>
     </BrowserRouter>
   );
