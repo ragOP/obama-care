@@ -50,7 +50,7 @@ export default function Main() {
     // Make the word "Allowance" bold in all lines
     boldedMessage = boldedMessage.replace(
       /\$3,600 Grocery Allowance/g,
-      '<strong class="green-bold">A Free Health Insurance</strong>'
+      '<strong class="green-bold">Free Health Insurance</strong>'
     );
 
     // Make specific dollar amounts bold only in specific lines
