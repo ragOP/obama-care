@@ -117,12 +117,12 @@ export default function Main() {
 
 
 
-  const [quiz, setQuiz] = useState("Are you over the age of 64?  ");
+  const [quiz, setQuiz] = useState("1. Are you over the age of 18?  ");
   const [step, setStep] = useState("process");
   const [min, setMin] = useState(3);
   const [second, setSecond] = useState(0);
-  const [yes,setYes]=useState("YES, I'M 65 OR OLDER")
-  const [no,setNo]=useState("NO, I'M 64 OR YOUNGER")
+  const [yes,setYes]=useState("YES")
+  const [no,setNo]=useState("NO")
   
 
   const stepProcess = () => {
@@ -167,10 +167,10 @@ export default function Main() {
 
   const handleQuizP = () => {
     topScroll("btn");
-    if (quiz === "Are you over the age of 64?  ") {
+    if (quiz === "1. Are you over the age of 18?  ") {
       setYes("Yes")
       setNo("No")
-      setQuiz("2. Do you live in the United States?");
+      setQuiz("2. Are you a legal resident of United States?");
     } else {
       setStep("Reviewing Your Answers...");
      
@@ -185,7 +185,7 @@ export default function Main() {
     if (quiz === "Are you over the age of 60?  ") {
       setYes("Yes")
       setNo("No")
-      setQuiz("2. Do you live in the United States?");
+      setQuiz("2. Are you a legal resident of United States?");
     } else {
       setStep("Reviewing Your Answers...");
     
