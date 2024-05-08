@@ -278,6 +278,7 @@ export default function Main() {
         pauseOnFocusLoss
         draggable
         pauseOnHover
+        style={{ right: 0, textAlign: "center" }}
       />
     </div>
   );
