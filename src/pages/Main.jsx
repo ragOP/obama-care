@@ -152,7 +152,7 @@ export default function Main() {
   }, [step]);
 
   const topScroll = (id) => {
-    // scrollTo({ id });
+    scrollTo({ id });
   };
 
   const handleQuizP = () => {
