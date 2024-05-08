@@ -196,7 +196,7 @@ export default function Main() {
         className="top-sticky-blue-test2"
         id="top"
       >
-        Senior's Allowance Program 2024
+        United Savings Hub
       </div>
       {step === "process" ? (
         <>
